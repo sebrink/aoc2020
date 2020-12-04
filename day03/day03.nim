@@ -1,7 +1,7 @@
-# Day01 Advent of Code 2020
-import strutils, sequtils
+# Day03 Advent of Code 2020
+import strutils
 
-# Parse part one
+# Solve part one
 proc partOne(file: seq[string]): int =
     var x,y: int
     let inputLength = file.len-2
@@ -14,6 +14,7 @@ proc partOne(file: seq[string]): int =
         if file[x][y] == '#':
             inc(result)
 
+# Made generic puzzle solver for usage in part 2
 proc genericPuzzleSolver(file: seq[string], xSlope,ySlope: int): int =
     var x,y: int
     let inputLength = file.len-2
@@ -26,6 +27,7 @@ proc genericPuzzleSolver(file: seq[string], xSlope,ySlope: int): int =
         if file[x][y] == '#':
             inc(result)
 
+# Solve part two
 proc partTwo(file: seq[string]): int =
     let slope1 = genericPuzzleSolver(file,1,1)
     let slope2 = genericPuzzleSolver(file,1,3)

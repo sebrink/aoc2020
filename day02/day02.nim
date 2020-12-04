@@ -1,4 +1,4 @@
-# Day01 Advent of Code 2020
+# Day02 Advent of Code 2020
 import strutils
 
 # Parse part one
